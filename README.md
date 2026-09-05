@@ -4,13 +4,13 @@
 
 > **RevenueIQ finds the money a business is losing, explains why it's happening, and tells the merchant what to do next.**
 
-**🚀 Live Demo:** https://revenueiq-cfl25bhdep3p9smnfzkohw.streamlit.app/
+** Live Demo:** https://revenueiq-cfl25bhdep3p9smnfzkohw.streamlit.app/
 
-**📦 Repository:** https://github.com/PallaviNawander/RevenueIQ
+**Repository:** https://github.com/PallaviNawander/RevenueIQ
 
 ---
 
-## 🧠 What is RevenueIQ?
+##  What is RevenueIQ?
 
 Businesses don't only lose money because of low sales.
 
@@ -38,7 +38,7 @@ RevenueIQ answers:
 
 ---
 
-# 🎯 The Core Idea
+#  The Core Idea
 
 RevenueIQ follows a simple principle:
 
@@ -82,9 +82,9 @@ This makes RevenueIQ **evidence-grounded rather than hallucination-driven.**
 
 ---
 
-# ✨ Key Features
+# Key Features
 
-## 1. 📊 Merchant Revenue Dashboard
+## 1.  Merchant Revenue Dashboard
 
 RevenueIQ provides a merchant-centric view of revenue health.
 
@@ -99,7 +99,7 @@ The dashboard surfaces:
 
 ---
 
-## 2. 🔎 Revenue Leak Detection
+## 2.  Revenue Leak Detection
 
 The detection engine analyzes transaction-level data to identify suspicious revenue events.
 
@@ -129,7 +129,7 @@ Evidence Bundle
 
 ---
 
-## 3. 🧑‍💼 Merchant-Aware Analysis
+## 3.  Merchant-Aware Analysis
 
 RevenueIQ is designed around **merchants/businesses**, not isolated transactions.
 
@@ -158,7 +158,7 @@ This allows the system to answer questions such as:
 
 ---
 
-# 🤖 AI Revenue Investigator
+#  AI Revenue Investigator
 
 The heart of RevenueIQ is its AI investigation layer.
 
@@ -191,7 +191,7 @@ The investigator returns a structured result containing:
 
 ---
 
-# 🛡️ Evidence-Grounded AI
+#  Evidence-Grounded AI
 
 One of the most important design decisions in RevenueIQ is separating **detection** from **reasoning**.
 
@@ -235,7 +235,7 @@ This architecture reduces the risk of an LLM inventing financial information.
 
 ---
 
-# 🏗️ System Architecture
+#  System Architecture
 
 ```mermaid
 flowchart TB
@@ -301,7 +301,7 @@ The system is intentionally lightweight:
 
 ---
 
-# 🔬 Detailed Investigation Pipeline
+#  Detailed Investigation Pipeline
 
 ```mermaid
 sequenceDiagram
@@ -328,7 +328,7 @@ sequenceDiagram
 
 ---
 
-# 🧩 Project Architecture
+#  Project Architecture
 
 The project deliberately avoids unnecessary infrastructure for the prototype.
 
@@ -363,7 +363,7 @@ RevenueIQ/
 
 ---
 
-# 📁 Component Breakdown
+#  Component Breakdown
 
 ## `app.py`
 
@@ -439,7 +439,7 @@ This separation prevents the AI from becoming the source of truth for transactio
 
 ---
 
-# 🤖 `agent.py`
+#  `agent.py`
 
 The AI investigation layer uses Google's Gemini API.
 
@@ -475,7 +475,7 @@ The AI returns:
 
 ---
 
-# 💰 Recovery Decision Model
+#  Recovery Decision Model
 
 RevenueIQ currently supports several possible actions:
 
@@ -521,7 +521,7 @@ It is:
 
 ---
 
-# 🔐 Security
+#  Security
 
 RevenueIQ keeps API credentials outside the source code.
 
@@ -575,7 +575,7 @@ flowchart LR
 
 ---
 
-# ☁️ Deployment Architecture
+#  Deployment Architecture
 
 RevenueIQ is designed to run as a lightweight Streamlit application.
 
@@ -614,7 +614,7 @@ Gemini API
 
 ---
 
-# 🚀 Live Demo
+#  Live Demo
 
 ## RevenueIQ is deployed here:
 
@@ -705,7 +705,7 @@ The application will open in your browser.
 
 ---
 
-# 🧪 Testing Gemini
+#  Testing Gemini
 
 The repository also contains:
 
@@ -771,9 +771,9 @@ This creates a natural path from prototype → production without changing Reven
 
 ---
 
-# 🔮 Future Roadmap
+# Future Roadmap
 
-### Phase 1 — Prototype ✅
+### Phase 1 — Prototype 
 
 * [x] Merchant dashboard
 * [x] Transaction-level revenue leak detection
@@ -812,7 +812,7 @@ This creates a natural path from prototype → production without changing Reven
 
 ---
 
-# 🧠 Design Philosophy
+# Design Philosophy
 
 RevenueIQ is built around three principles.
 
@@ -882,7 +882,7 @@ Revenue Recovery Intelligence
 
 ---
 
-# 🏆 Why RevenueIQ?
+#  Why RevenueIQ?
 
 Most payment analytics systems answer:
 
@@ -896,13 +896,13 @@ That shift — from **payment reporting** to **revenue recovery intelligence** �
 
 ---
 
-# 👩‍💻 Built For
+#  Built For
 
 RevenueIQ was built as a lightweight demonstration of how payment data, deterministic analytics, and generative AI can work together to create an actionable merchant intelligence system.
 
 ---
 
-## 📜 License
+##  License
 
 This project is intended as a prototype / buildathon project.
 
@@ -912,37 +912,11 @@ Add a license here if you decide to open-source the project formally.
 
 <p align="center">
 
-### 💎 RevenueIQ
+###  RevenueIQ
 
 **Detect the leak. Understand the cause. Recover the revenue.**
 
 </p>
 ```
 
-### One thing I'd change before you paste it
 
-There is **one deliberate placeholder** right at the top:
-
-```text
-🚀 Live Demo: <!-- ADD YOUR STREAMLIT DEPLOYMENT URL HERE -->
-```
-
-Once Streamlit gives you your URL, replace it with something like:
-
-```markdown
-🚀 **Live Demo:** https://revenueiq.streamlit.app
-```
-
-And the other placeholder under **Live Demo** too.
-
-### About the diagrams
-
-I used **Mermaid** rather than screenshots of draw.io diagrams because this is actually better for a GitHub README:
-
-* GitHub renders Mermaid diagrams directly.
-* They're crisp at every resolution.
-* You don't need to commit image files.
-* You can copy the Mermaid blocks into **draw.io / diagrams.net** and turn them into editable diagrams.
-* Most importantly, the architecture remains understandable to someone reviewing the repository.
-
-And I made the architecture emphasize the thing that makes your project interesting: **the LLM isn't deciding what happened to a transaction; your deterministic evidence layer establishes that first, and Gemini investigates it.** That's a much stronger story for the buildathon than simply saying "we use Gemini to analyze payments."
