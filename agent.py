@@ -1,19 +1,50 @@
+
 import json
 import os
 
+import streamlit as st
 from dotenv import load_dotenv
 from google import genai
 
 from tools import investigate_leak
 
 
+# =========================================================
+# API KEY
+# =========================================================
+
 load_dotenv()
+
+# Local development:
+# GEMINI_API_KEY comes from .env
+#
+# Streamlit Cloud:
+# GEMINI_API_KEY comes from Streamlit Secrets
+
+api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    try:
+        api_key = st.secrets["GEMINI_API_KEY"]
+    except Exception:
+        api_key = None
+
+if not api_key:
+    raise ValueError(
+        "GEMINI_API_KEY is not configured. "
+        "Add it to .env locally or to "
+        "Streamlit Cloud → Settings → Secrets."
+    )
 
 
 client = genai.Client(
-    api_key=os.getenv("GEMINI_API_KEY")
+    api_key=api_key
 )
 
+
+# =========================================================
+# SYSTEM PROMPT
+# =========================================================
 
 SYSTEM_PROMPT = """
 You are RevenueIQ, an expert AI revenue recovery investigator.
@@ -81,6 +112,10 @@ HIGH
 """
 
 
+# =========================================================
+# INVESTIGATION
+# =========================================================
+
 def investigate(leak_id, merchant_id):
     """Investigate a detected revenue leak using Gemini."""
 
@@ -131,6 +166,10 @@ Return the investigation in the required JSON format.
             "error": str(e)
         }
 
+
+# =========================================================
+# LOCAL TEST
+# =========================================================
 
 if __name__ == "__main__":
 
